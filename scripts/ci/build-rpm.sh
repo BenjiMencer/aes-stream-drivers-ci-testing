@@ -3,6 +3,7 @@
 # Required env vars: DRIVER_TYPE, TARGET_ENV
 set -euo pipefail
 
+dnf install -y -q epel-release >/dev/null
 dnf install -y -q make git tar rpm-build dkms >/dev/null
 
 make -C data_dev/driver dkms
